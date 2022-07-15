@@ -11,6 +11,7 @@
       <div class="carousel-caption ">
         <h5>piano master class</h5>
         <p>Become a lengend with our legends</p>
+        <p><a class="btn btn-warning" href="">learn more</a></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -18,6 +19,7 @@
       <div class="carousel-caption ">
         <h5>guitar master class</h5>
         <p>Become a legend with our legends</p>
+        <p><a class="btn btn-warning" href="">learn more</a></p>
       </div>
     </div>
     <div class="carousel-item">
@@ -25,6 +27,7 @@
       <div class="carousel-caption ">
         <h5>violin master class</h5>
         <p>Become a legend with our legends</p>
+        <p><a class="btn btn-warning" href="">learn more</a></p>
       </div>
     </div>
   </div>
@@ -42,7 +45,7 @@
 <section class="about section-padding mb-5 pb-3 bg-dark">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-4 col-md-12 col-12 mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
         <div class="about-img">
           <img src="../images/section-img-1.jpg" class="img-fluid rounded" alt="img1">
         </div>
@@ -73,7 +76,7 @@
 
     <div class="row">
       <div class="col-lg-4 col-md-12 col-12">
-        <div class="card text-white text-center bg-dark p-4" >
+        <div class="card text-white text-center bg-dark pb-4" >
           <div class="card-body">
             <i class="bi bi-music-note-beamed"></i>
             <h5 class="card-title">Mr.Rahamni</h5>
@@ -308,6 +311,9 @@ export default {
     margin: auto;
     line-height: 1.9;
   }
+  .carousel-inner .carousel-caption a {
+    margin: 15px 0px;
+  }
   .carousel-inner::before {
     content: '';
     width: 100%;
@@ -317,6 +323,9 @@ export default {
     left: 0;
     background: rgba(0,0,0,0.7);
     z-index: 1;
+  }
+  .about .container {
+    overflow: hidden;
   }
   .w-100 {
     height: 100vh;
@@ -353,12 +362,35 @@ export default {
   }
   /******** Responsive ******/
 
-  @media only screen and(max-width: 767px) {
-    .carousel-caption {
+  @media (max-width: 767px) {
+    .carousel-inner .carousel-caption {
       bottom: 125px;
     }
-    .carousel-caption h5 {
-      font-size: 10px !important;
+    .carousel-inner .carousel-caption h5 {
+      font-size: 20px;
+      letter-spacing: 1px;
+      padding: 10px 15px;
+    }
+    .about-img {
+      width: 400px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    .about-img img {
+      padding-bottom: 20px;
+    }
+    section .text1 {
+      margin-top: 100px;
+      text-align: center;
+    }
+    section .text1 p {
+      line-height: 1.8;
+    }
+    .card {
+      margin: 10px 0px;
+    }
+    .card-body {
+      text-align: center;
     }
   }
 </style>
